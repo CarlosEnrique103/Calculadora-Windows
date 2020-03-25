@@ -1,0 +1,63 @@
+$colorBoard: #1F1F1F;
+$colorNumber: #060606;
+$colorOperator: #131313;
+$colorEqual: #135C61; 
+$colorHover: #343534;
+$colorEqualHover: rgb(7, 193, 226); 
+$colorBorder: #1F1F1F;
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+.container{
+    width: 320px;
+    margin: 0 auto;
+    .board{
+        background-color: $colorBorder;
+        height: 105px;
+        p{
+            display: block;
+            width: 100%;
+            text-align: right;
+            padding: 60px 5px 0 0;
+            font-family: arial;
+            font-size: 35px;
+            font-weight: 150;
+            color: white;
+        }
+    }
+    .buttons {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        button {
+            border: 1px solid $colorBorder;
+            color:white;
+            padding: 18px;
+            font-size: 18px;
+        }
+        .btn-number{
+            background-color: $colorNumber;
+            &:hover{
+                background-color:$colorHover;
+            }
+        }
+        .btn-operator{
+            background-color: $colorOperator;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 22px;
+            &:hover{
+                background-color: $colorHover;
+            }
+        }
+        .btn-equal{
+            background-color: $colorEqual;
+            font-weight:'Quicksand', sans-serif;
+            font-size: 22px;
+            &:hover{
+                background-color: $colorEqualHover;
+            }
+        }
+    
+    }
+}
